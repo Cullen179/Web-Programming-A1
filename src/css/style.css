@@ -32,9 +32,11 @@ header {
 }
 
 
-header .logo {
+header .logo a{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: black;
 }
 
 header .logo span {
@@ -234,7 +236,6 @@ header nav ul li a:hover::after {
     gap: 40px;
 }
 
-
 .book {
     width: 240px;
     display: flex;
@@ -248,12 +249,17 @@ header nav ul li a:hover::after {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
 }
 
+.book a {
+    text-decoration: none;
+}
+
 .book_info h3 {
     font-size: 18px;
     height: 55px;
     font-weight: semi-bold;
     text-align: left;
     padding-top: 15px;
+    color: black;
 }
 
 .book_info p {
@@ -302,6 +308,18 @@ header nav ul li a:hover::after {
     margin-bottom: 8px;
 }
 
+.book_img button::after {
+    content: "Add to Cart";
+    position: absolute;
+    left: -100px;
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
 .book_img button span {
     font-weight: 300;
 }
@@ -317,6 +335,11 @@ header nav ul li a:hover::after {
 
 .book_img button:hover {
     animation: shake 0.6s;
+}
+
+.book_img button:hover::after {
+    opacity: 1;
+    display:block;
 }
 
 @keyframes shake {
@@ -335,7 +358,7 @@ header nav ul li a:hover::after {
 
 /* Detail link */
 .detail_link {
-    margin-top: 120px;
+    margin-top: 100px;
     margin-bottom: 20px;
     display: flex;
     width: 100%;
@@ -381,6 +404,7 @@ header nav ul li a:hover::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
 }
 
 .side_img {
@@ -395,6 +419,7 @@ header nav ul li a:hover::after {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: 0.5s;
 }
 
 .main_img:hover img, .side_img img:hover {
@@ -410,12 +435,13 @@ header nav ul li a:hover::after {
 }
 
 .price h1 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .price h2 {
-    font-size: 24px;
+    font-size: 45px;
     padding: 10px 0px;
+    font-weight: 400;
     color: var(--orange);
 }
 
@@ -432,6 +458,7 @@ header nav ul li a:hover::after {
 .price button:hover {
     background-color: var(--orange);
     color: var(--primary-color);
+    cursor: pointer;
 }
 /* Detail */
 
