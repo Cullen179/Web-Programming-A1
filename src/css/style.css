@@ -115,6 +115,10 @@ header nav ul li a:hover::after {
     aspect-ratio: 16/9;
 }
 
+.intro_display iframe {
+    border: none;
+}
+
 .intro_display iframe,
 .intro_display img {
     width: 100%;
@@ -135,7 +139,7 @@ header nav ul li a:hover::after {
     width: 560px;
 }
 
-.intro_content h1 {
+.intro_content h2 {
     padding: 20px 40px;
     font-size: 32px;
 }
@@ -192,7 +196,7 @@ header nav ul li a:hover::after {
     padding: 80px 0px;
 }
 
-.category_info h1 {
+.category_info h2 {
     font-size: 40px;
     font-weight: bold;
 
@@ -444,7 +448,7 @@ header nav ul li a:hover::after {
     justify-content: center;
 }
 
-.price h1 {
+.price h3 {
     font-size: 30px;
 }
 
@@ -485,11 +489,11 @@ header nav ul li a:hover::after {
     border-radius: 10px;
 }
 
-.description h1 {
+.description h2 {
     font-size: 40px;
 }
 
-.description h2 {
+.description h3 {
     font-size: 24px;
     padding: 7px 0px;
     color: var(--para-color);
