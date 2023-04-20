@@ -32,7 +32,7 @@ header {
 }
 
 
-header .logo a{
+header .logo a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -58,7 +58,7 @@ header .logo span {
     background-color: var(--secondary-color);
 }
 
-header nav ul{
+header nav ul {
     display: flex;
     list-style-type: none;
     column-gap: 8px;
@@ -96,6 +96,7 @@ header nav ul li a:hover::after {
     width: 100%;
     background-color: var(--secondary-color);
 }
+
 /* Header */
 
 /* Intro */
@@ -114,7 +115,8 @@ header nav ul li a:hover::after {
     aspect-ratio: 16/9;
 }
 
-.intro_display iframe, .intro_display img{
+.intro_display iframe,
+.intro_display img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -170,8 +172,7 @@ header nav ul li a:hover::after {
     transform: scale(1.2);
 }
 
-.intro_books img {
-}
+.intro_books img {}
 
 /* Intro */
 
@@ -194,7 +195,7 @@ header nav ul li a:hover::after {
 .category_info h1 {
     font-size: 40px;
     font-weight: bold;
-    
+
 }
 
 .category_detail {
@@ -203,7 +204,7 @@ header nav ul li a:hover::after {
     justify-content: center;
 }
 
-.category_detail a{
+.category_detail a {
     color: var(--quaternary-color);
     text-decoration: underline;
     padding: 0px 5px;
@@ -223,6 +224,7 @@ header nav ul li a:hover::after {
 .category_detail:hover a {
     color: var(--secondary-color);
 }
+
 /* Category */
 
 /* Book */
@@ -243,6 +245,7 @@ header nav ul li a:hover::after {
     padding: 15px 20px;
     border-radius: 5px;
     transition: 0.5s;
+    position: relative;
 }
 
 .book:hover {
@@ -284,13 +287,14 @@ header nav ul li a:hover::after {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
     border-radius: 8px;
 }
-.book_img img{
+
+.book_img img {
     width: 100%;
     object-fit: cover;
     transition: 0.5s;
 }
 
-.book_img button {
+.book_cart button {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -301,14 +305,15 @@ header nav ul li a:hover::after {
     border: 0px solid transparent;
     opacity: 0;
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 25px;
+    right: 30px;
     transition: 0.5s;
     transform: translateY(-50%);
     margin-bottom: 8px;
+    z-index: 10;
 }
 
-.book_img button::after {
+.book_cart button::after {
     content: "Add to Cart";
     position: absolute;
     left: -100px;
@@ -320,11 +325,11 @@ header nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-.book_img button span {
+.book_cart button span {
     font-weight: 300;
 }
 
-.book:hover .book_img button{
+.book:hover .book_cart button {
     opacity: 1;
     transform: translateY(0px);
 }
@@ -333,22 +338,24 @@ header nav ul li a:hover::after {
     transform: scale(1.1);
 }
 
-.book_img button:hover {
+.book_cart button:hover {
     animation: shake 0.6s;
 }
 
-.book_img button:hover::after {
+.book_cart button:hover::after {
     opacity: 1;
-    display:block;
+    display: block;
 }
 
 @keyframes shake {
     25% {
         transform: rotate(30deg);
     }
+
     50% {
         transform: rotate(-30deg);
     }
+
     25% {
         transform: rotate(30deg);
     }
@@ -366,7 +373,8 @@ header nav ul li a:hover::after {
     align-items: center;
 }
 
-.detail_link a, .detail_link p {
+.detail_link a,
+.detail_link p {
     padding: 5px 8px;
     text-decoration: none;
     font-size: 20px;
@@ -379,6 +387,7 @@ header nav ul li a:hover::after {
     color: var(--secondary-color);
     text-decoration: underline;
 }
+
 /* Detail link */
 
 /* Detail */
@@ -422,7 +431,8 @@ header nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-.main_img:hover img, .side_img img:hover {
+.main_img:hover img,
+.side_img img:hover {
     transform: scale(1.05);
 }
 
@@ -439,9 +449,9 @@ header nav ul li a:hover::after {
 }
 
 .price h2 {
-    font-size: 45px;
+    font-size: 32px;
     padding: 10px 0px;
-    font-weight: 400;
+    font-weight: bold;
     color: var(--orange);
 }
 
@@ -460,6 +470,7 @@ header nav ul li a:hover::after {
     color: var(--primary-color);
     cursor: pointer;
 }
+
 /* Detail */
 
 /* Description */
@@ -468,7 +479,7 @@ header nav ul li a:hover::after {
     flex-direction: column;
     padding: 30px 50px;
     margin: auto;
-    margin-top: 60px; 
+    margin-top: 60px;
     width: 70%;
     background-color: var(--tertiary-color);
     border-radius: 10px;
@@ -486,10 +497,11 @@ header nav ul li a:hover::after {
 
 .description p {
     font-size: 16px;
-    margin-top: 20px;    
+    margin-top: 20px;
     text-align: justify;
     line-height: 24px;
 }
+
 /* Description */
 
 /* Contact */
@@ -512,6 +524,7 @@ header nav ul li a:hover::after {
     margin-top: 120px;
     background-color: var(--secondary-color);
 }
+
 .contact h2 {
     text-align: center;
     font-size: 40px;
@@ -536,13 +549,24 @@ header nav ul li a:hover::after {
     padding: 3px;
 }
 
-.purpose, .preference, .news, .note, .name, .email, .phone {
+.purpose,
+.preference,
+.news,
+.note,
+.name,
+.email,
+.phone {
     display: flex;
     align-items: center;
     margin: 25px 0px;
 }
 
-.purpose label, .preference label:first-child, .note label, .name label, .phone label, .email label {
+.purpose label,
+.preference label:first-child,
+.note label,
+.name label,
+.phone label,
+.email label {
     width: 210px;
     font-size: 18px;
     font-weight: bold;
@@ -550,13 +574,17 @@ header nav ul li a:hover::after {
     text-align: right;
 }
 
-.news label:first-child, .note label {
+.news label:first-child,
+.note label {
     font-size: 18px;
     font-weight: bold;
     padding: 0px 15px;
 }
 
-.contact select, .name input, .email input, .phone input{
+.contact select,
+.name input,
+.email input,
+.phone input {
     flex: 1;
     width: 100%;
     height: 45px;
@@ -566,7 +594,16 @@ header nav ul li a:hover::after {
     border-radius: 5px;
 }
 
-.contact select:hover, .contact:focus, .note textarea:focus, .note textarea:hover, .name input:hover, .name input:focus, .email input:hover, .email input:focus, .phone input:hover, .phone input:focus {
+.contact select:hover,
+.contact:focus,
+.note textarea:focus,
+.note textarea:hover,
+.name input:hover,
+.name input:focus,
+.email input:hover,
+.email input:focus,
+.phone input:hover,
+.phone input:focus {
     border-bottom: 4px solid var(--quaternary-color);
     outline: none;
 }
@@ -682,7 +719,7 @@ footer ul li a:hover::after {
     background-color: var(--secondary-color);
 }
 
-footer ul li a:hover{
+footer ul li a:hover {
     color: var(--secondary-color);
 }
 
@@ -693,13 +730,22 @@ footer ul li a:hover{
     text-align: center;
     padding: 5px 0px;
 }
+
 /* Footer */
 
 /* Media Query */
 @media screen and (max-width: 960px) {
-    header, .category_info, .intro_display, .intro_content, .price, .description, .contact {
+
+    header,
+    .category_info,
+    .intro_display,
+    .intro_content,
+    .price,
+    .description,
+    .contact {
         width: 80%;
     }
+
     header nav ul {
         display: none;
         flex-direction: column;
@@ -709,11 +755,11 @@ footer ul li a:hover{
         width: 100%;
     }
 
-    header nav ul li a{
+    header nav ul li a {
         border-radius: 0px;
         padding: 20px;
     }
-    
+
     header nav ul li a::after {
         bottom: 0px;
     }
@@ -727,15 +773,19 @@ footer ul li a:hover{
         align-items: center;
     }
 
-    #menu:hover + ul, header nav ul:hover{
+    #menu:hover+ul,
+    header nav ul:hover {
         display: flex;
     }
 
-    #menu:hover + ul li a , header nav ul:hover li a {
+    #menu:hover+ul li a,
+    header nav ul:hover li a {
         background-color: var(--secondary-color);
     }
 
-    .intro_content h1, .intro_content p, .price {
+    .intro_content h1,
+    .intro_content p,
+    .price {
         padding-right: 0px;
         padding-left: 0px;
     }
@@ -757,19 +807,32 @@ footer ul li a:hover{
         width: calc(calc(100% - 10px) / 3);
     }
 
-    .purpose, .preference, .news, .note, .name, .email, .phone {
+    .purpose,
+    .preference,
+    .news,
+    .note,
+    .name,
+    .email,
+    .phone {
         flex-direction: column;
         align-items: flex-start;
         margin: 0px;
     }
 
-    .purpose label, .preference label:first-child, .news label:first-child, .note label, .name label, .phone label, .email label {
+    .purpose label,
+    .preference label:first-child,
+    .news label:first-child,
+    .note label,
+    .name label,
+    .phone label,
+    .email label {
         margin-bottom: 12px;
         padding: 0px;
         text-align: left;
     }
 
-    .news label:first-child, .note label {
+    .news label:first-child,
+    .note label {
         margin-top: 12px;
     }
 
@@ -777,4 +840,5 @@ footer ul li a:hover{
         max-width: 100%;
     }
 }
+
 /* Media Query */
