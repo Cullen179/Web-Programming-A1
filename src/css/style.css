@@ -188,7 +188,7 @@ header nav ul li a:hover::after {
 }
 
 .category_info {
-    width: 60%;
+    /* width: 60%; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -196,10 +196,34 @@ header nav ul li a:hover::after {
     padding: 80px 0px;
 }
 
-.category_info h2 {
+.category_info a {
     font-size: 40px;
     font-weight: bold;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    padding: 3px 20px;
+    color: black;
+}
 
+.category_info a::after {
+    width: 3px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.category_info a:hover::after {
+    left: 100%;
+    background-color: var(--secondary-color);
+}
+
+.category a:hover {
+    color: var(--secondary-color);
 }
 
 .category_detail {
@@ -741,7 +765,6 @@ footer ul li a:hover {
 @media screen and (max-width: 960px) {
 
     header,
-    .category_info,
     .intro_display,
     .intro_content,
     .price,
@@ -792,6 +815,20 @@ footer ul li a:hover {
     .price {
         padding-right: 0px;
         padding-left: 0px;
+    }
+
+    .detail_link {
+        flex-direction: column;
+    }
+
+    .detail_link a {
+        padding: 0px;
+    }
+
+    .detail_link p {
+        padding: 0px;
+        transform: rotate(90deg);
+        z-index: -1;
     }
 
     .img_display {
