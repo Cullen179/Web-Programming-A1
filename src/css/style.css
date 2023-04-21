@@ -148,6 +148,7 @@ header nav ul li a:hover::after {
     color: var(--para-color);
     font-size: 18px;
     padding: 0px 40px;
+    text-align: justify;
 }
 
 .intro_content span {
@@ -214,7 +215,7 @@ header nav ul li a:hover::after {
     bottom: 0px;
     left: 0px;
     background-color: black;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
 }
 
 .category_info a:hover::after {
