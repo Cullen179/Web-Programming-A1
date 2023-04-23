@@ -1,3 +1,14 @@
+<!-- RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Do Tung Lam
+ID: s3963286
+Acknowledgement: 
+Google font: https://fonts.google.com/
+Image and book description source: https://www.goodreads.com/
+Icon and logo source: https://www.flaticon.com/
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +55,7 @@
     <!-- Header -->
 
     <!-- Main -->
-    <main class="main_contact">
+    <main id="main-contact">
         <div class="contact">
             <h2>Contact Us</h2>
             <form action="app/form-processing" method="post" enctype="application/x-www-form-urlencoded">
@@ -68,12 +79,12 @@
                     <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required> <br>
                 </div>
                 <div class="preference">
-                    <label for="by_email">Contact Preference<span>*</span></label>
+                    <label for="by-email">Contact Preference<span>*</span></label>
                     <div class="options">
-                        <input type="checkbox" value="email" id="by_email" name="preference" required>
-                        <label for="by_email">By email</label>
-                        <input type="checkbox" value="phone" id="by_phone" name="preference" required>
-                        <label for="by_phone">By phone</label> <br>
+                        <input type="checkbox" value="email" id="by-email" name="preference" required>
+                        <label for="by-email">By email</label>
+                        <input type="checkbox" value="phone" id="by-phone" name="preference" required>
+                        <label for="by-phone">By phone</label> <br>
                     </div>
                 </div>
                 <div class="news">
@@ -89,9 +100,9 @@
                     <label for="note">Extra Note</label>
                     <textarea name="note" id="note" placeholder="Enter your extra note"></textarea>
                 </div>
-                <div class="form_btn">
-                    <button id="form_reset" type="reset">Reset</button>
-                    <button id="form_submit" type="submit">Submit</button>
+                <div class="form-btn">
+                    <button id="form-reset" type="reset">Reset</button>
+                    <button id="form-submit" type="submit">Submit</button>
                 </div>
             </form>
         </div>
@@ -109,7 +120,7 @@
                 <li><a href="./contact.html">Contact Us</a></li>
             </ul>
         </nav>
-            <div class="footer_note">
+            <div class="footer-note">
                 <p>© All right reserved | Bookshelf 2023</p>
             </div>
         </footer>
